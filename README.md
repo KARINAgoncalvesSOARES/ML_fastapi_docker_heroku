@@ -5,3 +5,5 @@
 Link de estudo:
 
 * [Deploy ML models with FastAPI, Docker, and Heroku | Tutorial](https://www.youtube.com/watch?v=h5wLuVDr0oc&ab_channel=AssemblyAI)
+
+* [Imagem oficial do Docker com Gunicorn - Uvicorn](https://fastapi.tiangolo.com/deployment/docker/#official-docker-image-with-gunicorn-uvicorn)
