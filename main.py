@@ -2,16 +2,16 @@
 Execução do script
 ==================
 
-$ uvicorn main:app --reload  (sem name == main)
+$ uvicorn main:app --reload  
 ou
-$ python main.py (Mantendo o name == main)
+$ python main.py 
 
 """
 from fastapi import FastAPI
 import uvicorn
 from pydantic import BaseModel # valida dados de entrada e de saída
-from app.modelo.model import predict_pipeline # Módulo específicado em minha aplicação (meu modelo)
-from app.modelo.model import __version__ as model_version
+from aplicativo.modelo.model import predict_pipeline # Módulo específicado em minha aplicação (meu modelo)
+from aplicativo.modelo.model import __version__ as model_version
 
 
 # Criando instância
@@ -28,7 +28,7 @@ class PredictionOut(BaseModel):
 # Verificação de integridade
 @app.get("/")
 def home():
-    return {"health_check": "OK", "model_version": model_version}
+    return {"checando desempenho do modelo": "OK", "model_version": model_version}
 
 # Solicitação HTTP POST(enviar dados)
 @app.post("/predict", response_model=PredictionOut)
